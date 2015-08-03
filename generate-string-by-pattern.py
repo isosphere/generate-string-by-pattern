@@ -5,6 +5,8 @@
     to be a tuple made up of those sets to the desired string length,
     and it will generate all permutations of those sets for that
     length.
+    
+    Please see the LICENSE file attached to the source repository for license information.
 
     Matthew Scheffel <mscheffel@gmail.com>
 """
