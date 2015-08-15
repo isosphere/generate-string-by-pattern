@@ -14,18 +14,6 @@
 from string import ascii_lowercase
 import re
 
-ascii_consonants = re.sub("[aeiou]", "", ascii_lowercase)
-ascii_vowels = "aeiou"
-
-# left-handed consonants on a qwerty keyboard
-#ascii_consonants = "qwrtsdfgzxcv"
-
-# left-handed vowels on a qwerty keyboard
-#ascii_vowels = "ae"
-
-V = ascii_vowels
-C = ascii_consonants
-
 def fill_position(position, length, partial):
     """ Recursive method that will iterate over the character
     set assigned for the current position in the string. If
@@ -37,6 +25,18 @@ def fill_position(position, length, partial):
     else:
         for character in pattern[position]:
             fill_position(position+1, length, partial+character)
+
+ascii_consonants = re.sub("[aeiou]", "", ascii_lowercase)
+ascii_vowels = "aeiou"
+
+# left-handed consonants on a qwerty keyboard
+#ascii_consonants = "qwrtsdfgzxcv"
+
+# left-handed vowels on a qwerty keyboard
+#ascii_vowels = "ae"
+
+V = ascii_vowels
+C = ascii_consonants
 
 pattern = (C, V, V, C, V)
 length  = len(pattern)
